@@ -1,19 +1,19 @@
 //
 //  ViewController.swift
-//  BANetworkSample
-//
-//  Created by burak on 19.03.2023.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
+    lazy var viewModel = ProductsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        viewModel.getProduct(id: "2") { response in
+
+        } failure: { error in
+
+        }
     }
-
-
 }
-

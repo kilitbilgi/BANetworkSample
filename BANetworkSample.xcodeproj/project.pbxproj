@@ -13,6 +13,11 @@
 		674F7DBD29C71C5400A89799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674F7DBB29C71C5400A89799 /* Main.storyboard */; };
 		674F7DBF29C71C5400A89799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 674F7DBE29C71C5400A89799 /* Assets.xcassets */; };
 		674F7DC229C71C5400A89799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 674F7DC029C71C5400A89799 /* LaunchScreen.storyboard */; };
+		674F7DD029C7206400A89799 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F7DCF29C7206400A89799 /* BaseViewModel.swift */; };
+		674F7DD229C7208400A89799 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F7DD129C7208400A89799 /* ProductsViewModel.swift */; };
+		674F7DD729C72C2500A89799 /* BANetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 674F7DD629C72C2500A89799 /* BANetwork */; };
+		674F7DDA29C72D9E00A89799 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F7DD929C72D9E00A89799 /* ProductResponse.swift */; };
+		674F7DDC29C72FF700A89799 /* BAConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674F7DDB29C72FF700A89799 /* BAConfig.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		674F7DBE29C71C5400A89799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		674F7DC129C71C5400A89799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		674F7DC329C71C5400A89799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		674F7DCF29C7206400A89799 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		674F7DD129C7208400A89799 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		674F7DD429C7213A00A89799 /* BANetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BANetwork; path = "../../ios-libs/BANetwork"; sourceTree = "<group>"; };
+		674F7DD929C72D9E00A89799 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		674F7DDB29C72FF700A89799 /* BAConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BAConfig.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674F7DD729C72C2500A89799 /* BANetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +51,10 @@
 		674F7DA929C71C5400A89799 = {
 			isa = PBXGroup;
 			children = (
+				674F7DD329C7213A00A89799 /* Packages */,
 				674F7DB429C71C5400A89799 /* BANetworkSample */,
 				674F7DB329C71C5400A89799 /* Products */,
+				674F7DD529C72C2500A89799 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,74 @@
 		674F7DB429C71C5400A89799 /* BANetworkSample */ = {
 			isa = PBXGroup;
 			children = (
+				674F7DDD29C7319E00A89799 /* ViewController */,
+				674F7DCC29C7203A00A89799 /* ViewModel */,
+				674F7DD829C72D9500A89799 /* Model */,
 				674F7DB529C71C5400A89799 /* AppDelegate.swift */,
 				674F7DB729C71C5400A89799 /* SceneDelegate.swift */,
-				674F7DB929C71C5400A89799 /* ViewController.swift */,
 				674F7DBB29C71C5400A89799 /* Main.storyboard */,
 				674F7DBE29C71C5400A89799 /* Assets.xcassets */,
 				674F7DC029C71C5400A89799 /* LaunchScreen.storyboard */,
 				674F7DC329C71C5400A89799 /* Info.plist */,
+				674F7DDB29C72FF700A89799 /* BAConfig.plist */,
 			);
 			path = BANetworkSample;
+			sourceTree = "<group>";
+		};
+		674F7DCC29C7203A00A89799 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DCD29C7204300A89799 /* Base */,
+				674F7DCE29C7204900A89799 /* Products */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		674F7DCD29C7204300A89799 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DCF29C7206400A89799 /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		674F7DCE29C7204900A89799 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DD129C7208400A89799 /* ProductsViewModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		674F7DD329C7213A00A89799 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DD429C7213A00A89799 /* BANetwork */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		674F7DD529C72C2500A89799 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		674F7DD829C72D9500A89799 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DD929C72D9E00A89799 /* ProductResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		674F7DDD29C7319E00A89799 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				674F7DB929C71C5400A89799 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +155,9 @@
 			dependencies = (
 			);
 			name = BANetworkSample;
+			packageProductDependencies = (
+				674F7DD629C72C2500A89799 /* BANetwork */,
+			);
 			productName = BANetworkSample;
 			productReference = 674F7DB229C71C5400A89799 /* BANetworkSample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +186,8 @@
 				Base,
 			);
 			mainGroup = 674F7DA929C71C5400A89799;
+			packageReferences = (
+			);
 			productRefGroup = 674F7DB329C71C5400A89799 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				674F7DC229C71C5400A89799 /* LaunchScreen.storyboard in Resources */,
+				674F7DDC29C72FF700A89799 /* BAConfig.plist in Resources */,
 				674F7DBF29C71C5400A89799 /* Assets.xcassets in Resources */,
 				674F7DBD29C71C5400A89799 /* Main.storyboard in Resources */,
 			);
@@ -138,8 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				674F7DDA29C72D9E00A89799 /* ProductResponse.swift in Sources */,
 				674F7DBA29C71C5400A89799 /* ViewController.swift in Sources */,
+				674F7DD029C7206400A89799 /* BaseViewModel.swift in Sources */,
 				674F7DB629C71C5400A89799 /* AppDelegate.swift in Sources */,
+				674F7DD229C7208400A89799 /* ProductsViewModel.swift in Sources */,
 				674F7DB829C71C5400A89799 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +437,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		674F7DD629C72C2500A89799 /* BANetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BANetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 674F7DAA29C71C5400A89799 /* Project object */;
 }
