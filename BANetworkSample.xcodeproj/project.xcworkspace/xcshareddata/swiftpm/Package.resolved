@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "banetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kilitbilgi/BANetwork.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d33a0ab8885eae9823c5f544172a3bd35c6154b5"
+      }
+    }
+  ],
+  "version" : 2
+}
