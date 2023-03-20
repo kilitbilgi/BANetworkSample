@@ -18,6 +18,7 @@
 		674F7DD729C72C2500A89799 /* BANetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 674F7DD629C72C2500A89799 /* BANetwork */; };
 		674F7DDA29C72D9E00A89799 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 674F7DD929C72D9E00A89799 /* ProductResponse.swift */; };
 		674F7DDC29C72FF700A89799 /* BAConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 674F7DDB29C72FF700A89799 /* BAConfig.plist */; };
+		67CCA2C529C8CD0D00CB4DFA /* AddProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CCA2C429C8CD0D00CB4DFA /* AddProductResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		674F7DD429C7213A00A89799 /* BANetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = BANetwork; path = "../../ios-libs/BANetwork"; sourceTree = "<group>"; };
 		674F7DD929C72D9E00A89799 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		674F7DDB29C72FF700A89799 /* BAConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BAConfig.plist; sourceTree = "<group>"; };
+		67CCA2C429C8CD0D00CB4DFA /* AddProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				674F7DD929C72D9E00A89799 /* ProductResponse.swift */,
+				67CCA2C429C8CD0D00CB4DFA /* AddProductResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			files = (
 				674F7DDA29C72D9E00A89799 /* ProductResponse.swift in Sources */,
 				674F7DBA29C71C5400A89799 /* ViewController.swift in Sources */,
+				67CCA2C529C8CD0D00CB4DFA /* AddProductResponse.swift in Sources */,
 				674F7DD029C7206400A89799 /* BaseViewModel.swift in Sources */,
 				674F7DB629C71C5400A89799 /* AppDelegate.swift in Sources */,
 				674F7DD229C7208400A89799 /* ProductsViewModel.swift in Sources */,

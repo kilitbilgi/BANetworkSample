@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BANetworkSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIs-6V-rDc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPh-16-8uh">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Get Product">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didGetProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUC-aY-Tp8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="fPh-16-8uh" secondAttribute="trailing" id="T2G-fI-CWs"/>
+                                    <constraint firstAttribute="bottom" secondItem="fPh-16-8uh" secondAttribute="bottom" id="cJU-jD-soj"/>
+                                    <constraint firstItem="fPh-16-8uh" firstAttribute="top" secondItem="RIs-6V-rDc" secondAttribute="top" id="q6K-xs-Fxt"/>
+                                    <constraint firstItem="fPh-16-8uh" firstAttribute="leading" secondItem="RIs-6V-rDc" secondAttribute="leading" id="sxq-id-Ei9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBT-uH-8M5">
+                                <rect key="frame" x="0.0" y="426" width="393" height="426"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-9Y-ZPY">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="426"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Add Product">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didAddProduct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iq6-Nt-hxE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstItem="VeD-9Y-ZPY" firstAttribute="leading" secondItem="SBT-uH-8M5" secondAttribute="leading" id="P2G-uu-7rp"/>
+                                    <constraint firstAttribute="bottom" secondItem="VeD-9Y-ZPY" secondAttribute="bottom" id="YOi-r8-CJT"/>
+                                    <constraint firstAttribute="trailing" secondItem="VeD-9Y-ZPY" secondAttribute="trailing" id="bxy-n0-VAk"/>
+                                    <constraint firstItem="VeD-9Y-ZPY" firstAttribute="top" secondItem="SBT-uH-8M5" secondAttribute="top" id="zJI-mH-YzX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RIs-6V-rDc" secondAttribute="trailing" id="C62-wE-wTL"/>
+                            <constraint firstItem="RIs-6V-rDc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CVB-iM-xDv"/>
+                            <constraint firstItem="SBT-uH-8M5" firstAttribute="trailing" secondItem="RIs-6V-rDc" secondAttribute="trailing" id="TyM-f4-ofw"/>
+                            <constraint firstAttribute="bottom" secondItem="SBT-uH-8M5" secondAttribute="bottom" id="ab6-sW-oJu"/>
+                            <constraint firstItem="SBT-uH-8M5" firstAttribute="top" secondItem="RIs-6V-rDc" secondAttribute="bottom" id="cIa-uT-0Ir"/>
+                            <constraint firstItem="RIs-6V-rDc" firstAttribute="height" secondItem="SBT-uH-8M5" secondAttribute="height" id="eQy-Xy-HWP"/>
+                            <constraint firstItem="SBT-uH-8M5" firstAttribute="leading" secondItem="RIs-6V-rDc" secondAttribute="leading" id="jnK-Ao-LiZ"/>
+                            <constraint firstItem="RIs-6V-rDc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ocM-m1-hT1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="-2"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

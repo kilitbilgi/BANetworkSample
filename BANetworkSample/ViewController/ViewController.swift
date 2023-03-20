@@ -7,13 +7,27 @@ import UIKit
 class ViewController: UIViewController {
     lazy var viewModel = ProductsViewModel()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func didGetProduct(_: Any) {
+        getProduct()
+    }
 
-        viewModel.getProduct(id: "2") { response in
+    @IBAction func didAddProduct(_: Any) {
+        addProduct()
+    }
 
+    private func getProduct() {
+        viewModel.getProduct(id: "1") { response in
+            print(response)
         } failure: { error in
+            print(error)
+        }
+    }
 
+    private func addProduct() {
+        viewModel.addProduct { response in
+            print(response)
+        } failure: { error in
+            print(error)
         }
     }
 }
